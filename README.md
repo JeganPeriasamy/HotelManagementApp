@@ -1,32 +1,58 @@
-# HotelManagementApp
+# Hotel Management App
 
-Project – HOTEL MANAGEMENT APP – Prepare
-Front End UI   - USE Router
-1.	LOGIN PAGE:  - 3 users 
-      •	ORDER TAKER (Service)
-      •	MANAGER 
-      •	SELF ORDER – BY: Customer (Self Service)
-2.	CONTENT PAGE: (Available for Order taker and Customer)
-      •	It should show the all the data with the Customer Rating (star indication)
-      •	Here there should be a side bar with 
+### Backend
 
-            1.	ITEMS 
-            2.	MY ORDERS 
-            3.	KITCHEN 
-      •	IF THE ITEM IS CLICKED -IT SHOULD SHOW IN THE CART SECTION WHICH IS RIDE SIDE OF THE PAGE OF Orders 
+Tech Stack
 
-            It should contain 
-            1.	Quantity + / - Button – With the Number increment and Decrement 
-            2.	Checkbox - Parcel or not 4
-            3.	Check Box - Tips 
-            4.	And below Price – Fix accordingly to the Quantity 
-            5.	Below there should be a GST charge of percent amount
-            6.	Parcel Charges 
-            7.	Grand Total = Price + GST+(if applicable )  Parcel Charges + Tips 
-            8.	ADD TO ORDER BUTTON 
-            •	When the Add to Cart Button clicked – It should the show that ITEM + GRANTTOTAL VALUE IN THE ORDERS
-            •	Cart Column should get clear after add to cart button is clicked 
-            •	When the Add to cart button is clicked – it should also show in the Kitchen – ITEM AND QUANTITY – With User Name ( Either SERVER Who Takes order or Customer name if self-Order )
+- Express Js
+- MongoDB with mongoose
+- PassportJs middleware for authentication (JWT Bearer token)
+- Websocket (SocketIO) for realtime communication of orders
 
-Note:
-Manager - page Should display the Kitchen Items with - (Either SERVER Who Takes order or Customer name if self-Order)
+### FrontEnd
+
+- ReactJs
+- SocketIO
+
+## Requirement
+
+Create a hotel management app with a login page and signup.
+
+### Signup and login
+
+1. By default there should be a admin user (userName: admin, password: \*)
+2. The signup should get the users
+   - userName (unique)
+   - role (waiter,manager,chef)
+   - password
+3. The User should be able to login with
+   - username (unique)
+   - password
+
+### Waiter
+
+1. The left pane should have
+
+   - Dishes
+   - New Order
+   - Previous Order
+
+- The dishes page should list all the dishes the hotel currently has
+- Once the waiter clicks **new order**, the waiter should
+  1. Select the **table Number** / **Parcel**
+  2. Select the dishes from the list with quantity and price
+  3. Once the place order is clicked, the order is placed and the order is moved to the chef.
+  4. Each order should have a unique number.
+  5. He can also add to the existing order
+  6. Once the waiter clicks **proceed to billing** and the billing is forwarded to the manager.
+
+### Manager
+
+1. The manager should be able to add new dishes to the list
+2. The manager should be able to close the billing by marking the order as **paid**
+
+### Chef
+
+1. Once the order is received to the chef, he should update the status of the order
+   - preparing
+   - ready
