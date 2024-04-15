@@ -77,3 +77,10 @@ It's like having a phone call where both parties can talk and listen at the same
 Socket.IO is a library for Node.js that makes working with WebSocket easier. It provides a way for the server and client to establish a WebSocket connection and exchange messages in real-time.
 
 In the context of a hotel management app, using WebSocket (Socket.IO) allows the server to instantly send updates about orders to the clients (like kitchen staff or waiters) as they are placed. This means that everyone involved can stay updated in real-time without needing to refresh the page or make repeated requests to the server.
+
+
+EXPRESS JS
+
+Express.js is a web application framework for Node.js, which makes it easier to build web applications and APIs by providing a set of tools and features.
+
+Example : Imagine you're building a website for a pizza delivery service. You want customers to be able to place orders and track their delivery
