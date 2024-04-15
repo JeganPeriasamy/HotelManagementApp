@@ -56,3 +56,20 @@ Create a hotel management app with a login page and signup.
 1. Once the order is received to the chef, he should update the status of the order
    - preparing
    - ready
+
+
+
+Passport.js is a middleware used in Node.js applications for handling authentication. It provides a way to authenticate users using different strategies, such as username/password, social logins (like Facebook or Google), or in this case, JWT (JSON Web Token) bearer tokens.
+
+JWT bearer tokens are a type of token that you can use to authenticate requests. When a user logs in, the server creates a JWT token and sends it back to the client. The client then includes this token in the headers of future requests. The server can verify the token to make sure the request is coming from a logged-in user and respond accordingly.
+
+So, in simple terms, Passport.js with JWT bearer tokens helps secure your application by verifying that the requests are coming from authenticated users.
+
+
+
+
+WebSocket is a technology that allows for real-time, two-way communication between a client (like a web browser) and a server. It's like having a phone call where both parties can talk and listen at the same time, compared to traditional HTTP requests where the client asks for information and the server responds.
+
+Socket.IO is a library for Node.js that makes working with WebSocket easier. It provides a way for the server and client to establish a WebSocket connection and exchange messages in real-time.
+
+In the context of a hotel management app, using WebSocket (Socket.IO) allows the server to instantly send updates about orders to the clients (like kitchen staff or waiters) as they are placed. This means that everyone involved can stay updated in real-time without needing to refresh the page or make repeated requests to the server.
